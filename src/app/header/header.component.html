@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-md fixed navbar-dark bg-dark">
+    <a class="navbar-brand" [routerLink]="">MAr</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item active" *ngIf="theHardcodeauthentionserviceServiceService.isLogin()">
+                <div class="content-profile-image">
+                    <img src="../../assets/images/default.jpg" width="20" height="20" class="profile-image"
+                        alt="profile image" />
+                    <a class="nav-link"
+                        [routerLink]="">{{ theHardcodeauthentionserviceServiceService.getUserName() }}<span
+                            class="sr-only">(current)</span></a>
+                </div>
+            </li>
+            <li class="nav-item" *ngIf="theHardcodeauthentionserviceServiceService.isLogin()">
+                <a class="nav-link" [cdkCopyToClipboard]="url"><i class="fa fa-link link-icon"
+                        aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item" *ngIf="theHardcodeauthentionserviceServiceService.isLogin()">
+                <a class="nav-link" [routerLink]="">Messages<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown" *ngxPermissionsOnly="['CREATE','UPDATE','DELETE']">
+                <a class="nav-link dropdown-toggle btn btn-secondary" [routerLink]="" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Managment
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="">About Us</a>
+            </li>
+            <li class="nav-item" *ngIf="!theHardcodeauthentionserviceServiceService.isLogin()">
+                <a class="nav-link" [routerLink]="['/login']">Login</a>
+            </li>
+            <li class="nav-item logout-item" *ngIf="theHardcodeauthentionserviceServiceService.isLogin()">
+                <a class="nav-link" (click)="theHardcodeauthentionserviceServiceService.logout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>

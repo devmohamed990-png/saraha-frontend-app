@@ -1,0 +1,29 @@
+.card-edit {
+    width: 45%;
+    margin: auto;
+    margin-top: 10%;
+    height: 300px;
+    box-shadow: 0px 0px 48px black;
+    opacity: 0.9;
+}
+
+.textarea-edit {
+    min-height: 135px;
+}
+
+.form-edit {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .mat-form-field-edit {
+    width: 100%;
+  }
+
+  .button-edit {
+      margin-left: 50%;
+      font-size: 18px;
+      font-weight: bold;
+      min-height: 50px;
+  }

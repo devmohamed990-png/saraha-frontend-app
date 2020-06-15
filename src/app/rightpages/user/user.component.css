@@ -1,0 +1,40 @@
+.btn-add-edit {
+    float: right;
+    margin-bottom: 0px;
+    margin-top: 2%;
+    font-size: 18px;
+    font-weight: 600;
+    width: 13%;
+    text-align: center;
+    margin-right: -95px;
+}
+
+.add-icon-edit {
+    padding-right: 7px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+table {
+    width: 111%;
+    margin-top: 8%;
+}
+
+th.mat-header-cell,
+td.mat-cell,
+td.mat-footer-cell {
+    text-align: center;
+    white-space: pre;
+}
+
+th.mat-header-cell {
+    font-weight: bold;
+}
+
+.update-icon-edit,
+.delete-icon-edit {
+    font-size: 18px;
+    text-align: center;
+    line-height: 33px;
+    font-weight: 600;
+}

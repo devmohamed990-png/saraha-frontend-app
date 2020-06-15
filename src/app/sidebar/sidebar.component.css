@@ -1,0 +1,65 @@
+.container-edit {
+    min-height: 524px;
+}
+
+.divider-edit {
+    width: 116%;
+    margin-top: 8px;
+    margin-bottom: 14px;
+}
+
+.content-items {
+    margin-top: 12px;
+    width: 100%;
+    padding-left: 8px;
+}
+
+.item-message,
+.item-person,
+.item-setting,
+.item-sign-out {
+    font-size: 24px;
+    padding-left: 5px;
+    width: 100%;
+}
+
+.item-message {
+    padding-right: 60px;
+}
+
+.number-message {
+    margin-left: 13px;
+    margin-top: 4px;
+}
+
+.item-person {
+    padding-right: 100px;
+}
+
+.item-setting {
+    padding-right: 85px;
+}
+
+.item-sign-out {
+    padding-right: 83px;
+}
+
+.item-message:hover,
+.item-person:hover,
+.item-setting:hover,
+.item-sign-out:hover {
+    cursor: pointer;
+    border: 0;
+}
+
+.message-icon,
+.person-con,
+.setting-icon {
+    padding-right: 8px;
+    font-size: 26px;
+}
+
+.sign-out-icon {
+    padding-right: 3px;
+    font-size: 26px;
+}

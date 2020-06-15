@@ -1,0 +1,27 @@
+<form>
+    <div class="form-row form-row-login">
+        <div class="col-md-9 mb-9">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="username-label">Username</span>
+                </div>
+                <input type="text" [ngClass]="usernameChecker === true ? 'form-control is-valid' : 'form-control is-invalid'" id="username" [(ngModel)]="username" name="username" (change)="changeInInput($event)" placeholder="devmohamed990" required>
+            </div>
+        </div>
+        <div class="col-md-9 mb-9">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="password-label">Password</span>
+                </div>
+                <input type="password" [ngClass]="passwordChecker === true ? 'form-control is-valid' : 'form-control is-invalid'" id="password" [(ngModel)]="password" name="password" (change)="changeInInput($event)" placeholder="*****" required>
+            </div>
+            <div class="" class="forget-password">
+                <a [routerLink]="">Forget Password</a>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit" (click)="login()">
+        Login
+    </button>
+    <button mat-raised-button (click)="openDialog()" class="btn-signUp">Sign up</button>
+</form>

@@ -1,0 +1,19 @@
+.container-edit {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row-edit {
+    margin-right: 0px;
+}
+
+.side-bar-edit {
+    width: 85%;
+}
+
+.right-page {
+    width: 100%;
+    margin-left: -50px;
+}

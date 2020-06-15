@@ -1,0 +1,66 @@
+.form-row-login {
+    margin-top: 17%;
+}
+
+.mb-3, .my-3 {
+    margin-left: 14%;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    margin-left: 18%;
+    width: 67%;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.forget-password {
+    margin-left: 25%;
+    margin-top: -10px;
+    margin-bottom: 13px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.signup-btn {
+    margin-top: 5px;
+}
+
+.signup-grid {
+    margin-left: 39px;
+    margin-top: 20px;
+}
+
+.fName,
+.lName,
+.country,
+.email,
+.username {
+    text-align: center;
+}
+
+.input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle), 
+.input-group>.input-group-append:last-child>.input-group-text:not(:last-child), 
+.input-group>.input-group-append:not(:last-child)>.btn, 
+.input-group>.input-group-append:not(:last-child)>.input-group-text, 
+.input-group>.input-group-prepend>.btn, 
+.input-group>.input-group-prepend>.input-group-text {
+    width: 115px;
+}
+
+select {
+    width: 210px;
+    padding-left: 5%;
+}
+
+[type=button][_ngcontent-jpq-c47]:not(:disabled), 
+[type=reset][_ngcontent-jpq-c47]:not(:disabled), 
+[type=submit][_ngcontent-jpq-c47]:not(:disabled), 
+button[_ngcontent-jpq-c47]:not(:disabled) {
+    margin-top: 22px;
+    width: 88%;
+    margin-left: 5%;
+}
+
+.btn-signUp {
+    margin-top: 13px;
+}

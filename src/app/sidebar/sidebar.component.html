@@ -1,0 +1,22 @@
+<div class="container-fluid bg-light container-edit">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content-items">
+                <mat-list class="col-md-12">
+                    <mat-divider class="divider divider-edit"></mat-divider>
+                    <mat-list-item *ngxPermissionsOnly="['VIEW','CREATE','UPDATE','DELETE']" class="text-muted item-message" [routerLink]="['/main/message']"><i class="fa fa-envelope-open message-icon" aria-hidden="true"></i> Messages <span matBadge="4" matBadgeOverlap="false" matBadgeColor="warn" class="number-message"></span>
+                    </mat-list-item>
+                    <mat-divider *ngxPermissionsOnly="['CREATE','UPDATE','DELETE']" class="divider divider-edit"></mat-divider>
+                    <mat-list-item *ngxPermissionsOnly="['CREATE','UPDATE','DELETE']" class="text-muted item-person" [routerLink]="['/main/user']"><i class="fa fa-child person-con" aria-hidden="true"></i> Person
+                    </mat-list-item>
+                    <mat-divider class="divider divider-edit"></mat-divider>
+                    <mat-list-item *ngxPermissionsOnly="['VIEW','CREATE','UPDATE','DELETE']" class="text-muted item-setting" [routerLink]="['/main/setting']"><i class="fa fa-cog setting-icon" aria-hidden="true"></i> Settings
+                    </mat-list-item>
+                    <mat-divider class="divider divider-edit"></mat-divider>
+                    <mat-list-item *ngxPermissionsOnly="['VIEW','CREATE','UPDATE','DELETE']" class="text-muted item-sign-out" (click)="theHardcodeauthentionserviceServiceService.logout()"><i class="fa fa-sign-out sign-out-icon" aria-hidden="true"></i> Logout
+                    </mat-list-item>
+                </mat-list>
+            </div>
+        </div>
+    </div>
+</div>

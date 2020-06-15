@@ -1,0 +1,104 @@
+<div class="container-fluid container-edit">
+    <div class="form-row">
+        <div class="col-md-6">
+            <mat-form-field appearance="fill">
+                <mat-label>First Name</mat-label>
+                <input matInput [formControl]="fNameFormControl" class="fName" [(ngModel)]="backendResponseUserDTO.userFirstName" name="userFirstName" required>
+                <mat-error *ngIf="fNameFormControl.hasError('required') || fNameFormControl.hasError('minlength') || fNameFormControl.hasError('maxlength')">
+                    First Name must be between <strong>(3,7)</strong>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="col-md-6">
+            <mat-form-field appearance="fill">
+                <mat-label>Last Name</mat-label>
+                <input matInput [formControl]="lNameFormControl" class="lName" [(ngModel)]="backendResponseUserDTO.userLastName" name="userLastName" required>
+                <mat-error *ngIf="lNameFormControl.hasError('required') || lNameFormControl.hasError('minlength') || lNameFormControl.hasError('maxlength')">
+                    Last Name must be between <strong>(3,7)</strong>
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6">
+            <mat-form-field class="email" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput [disabled]="true" [value]="backendResponseUserDTO.userEmail">
+            </mat-form-field>
+        </div>
+        <div class="col-md-6">
+            <mat-form-field appearance="fill">
+                <mat-label>Username</mat-label>
+                <input matInput [formControl]="usernameFormControl" class="username" [(ngModel)]="backendResponseUserDTO.userUsername" name="Userusername" required>
+                <mat-error *ngIf="usernameFormControl.hasError('required') || usernameFormControl.hasError('minlength') || usernameFormControl.hasError('maxlength')">
+                    Username must be more than <strong>10</strong>
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6">
+            <mat-form-field appearance="fill">
+                <mat-label>Country</mat-label>
+                <mat-select [formControl]="countryFormControl" class="country" [(value)]="selectedCountry" [(ngModel)]="selectedCountry" name="country" required>
+                    <mat-option [value]="backendResponseUserDTO.userCountry" [disabled]="true"> {{ backendResponseUserDTO.userCountry.country }} </mat-option>
+                    <mat-option *ngFor="let country of countries" [value]="country"> {{ country.country }} </mat-option>
+                </mat-select>
+                <mat-error *ngIf="countryFormControl.hasError('required')">
+                    Please, Choose your<strong>Country</strong>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="col-md-6">
+            <mat-form-field appearance="fill">
+                <mat-label>Gender</mat-label>
+                <mat-select [formControl]="genderFormControl" [(value)]="gender" [(ngModel)]="gender" class="gender" required>
+                    <mat-option value="Male">Male</mat-option>
+                    <mat-option value="Female">Female</mat-option>
+                </mat-select>
+                <mat-error *ngIf="genderFormControl.hasError('required')">
+                    Please, Choose your <strong>Sex</strong>
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6">
+            <mat-form-field appearance="fill">
+                <mat-label>Phone</mat-label>
+                <input matInput [formControl]="phoneFormControl" class="phone" type="number" [(ngModel)]="backendResponseUserDTO.userPhone" name="userPhone" required>
+                <mat-error *ngIf="phoneFormControl.hasError('required') || phoneFormControl.hasError('min') || phoneFormControl.hasError('max')">
+                    Phone must be equals or more than <strong>11 numbers</strong>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="col-md-6">
+            <mat-form-field color="primary">
+                <mat-label>Birth Day</mat-label>
+                <input matInput [formControl]="birthDayFormControl" [matDatepicker]="datepicker" [(ngModel)]="birthDate" name="userBirthDay" required>
+                <mat-error *ngIf="phoneFormControl.hasError('required')">
+                    Please, Choose your <strong>Birth Day</strong>
+                </mat-error>
+                <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                <mat-datepicker #datepicker color="primary"></mat-datepicker>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6">
+            <mat-form-field appearance="fill">
+                <mat-label>Country</mat-label>
+                <mat-select [formControl]="roleFormControl" class="role" [(value)]="selectedRole" [(ngModel)]="selectedRole" name="selectedRole" required>
+                    <mat-option [value]="backendResponseUserDTO.userRole" [disabled]="true"> {{ backendResponseUserDTO.userRole.role }} </mat-option>
+                    <mat-option *ngFor="let role of roles" [value]="role"> {{ role.role }} </mat-option>
+                </mat-select>
+                <mat-error *ngIf="roleFormControl.hasError('required')">
+                    Please, Choose your<strong>Country</strong>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="col-md-6">
+            <button mat-raised-button color="primary" class="btn-signup" (click)="update()">Save</button>
+        </div>
+    </div>
+</div>

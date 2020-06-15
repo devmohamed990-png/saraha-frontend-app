@@ -1,0 +1,13 @@
+.footer {
+    height: 40px;
+    bottom: 0px;
+    margin-top: 18px;
+    position: absolute;
+    background-color: #222222;
+    width: 100%;
+    text-align: center;
+}
+
+.text-muted-edit {
+    line-height: 40px;
+}
